@@ -1,7 +1,9 @@
+import { VueConstructor } from "vue";
+
 /**
  * Регистрируем глобальгные компоненты
  */
-export default (app) => {
+export default (app: VueConstructor) => {
   const requireComponent = require.context(
     "../components/base",
     true,
