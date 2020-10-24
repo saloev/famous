@@ -1,0 +1,3 @@
+@mixin transition($prop: opacity, $delay: 0.2s, $func: ease-in-out) {
+  transition: $prop $delay $func;
+}
