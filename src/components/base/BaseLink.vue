@@ -1,5 +1,4 @@
 <script lang="ts">
-import router from "@/router";
 /* eslint-disable */
 import { VNode, CreateElement } from "vue";
 import { Vue, Prop, Component } from "vue-property-decorator";
