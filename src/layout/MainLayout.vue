@@ -27,5 +27,17 @@ export default class MainLayout extends Vue {}
 
 <style lang="scss">
 .main-layout {
+  &__header {
+    border-bottom: 1px solid $info;
+  }
+
+  &__content {
+    min-height: calc(100vh - 97px - 96px);
+    padding: 45px 0;
+  }
+
+  &__footer {
+    background-color: $info--light;
+  }
 }
 </style>
