@@ -93,7 +93,6 @@ export default class Card extends Vue {
   max-width: 280px;
   padding: $default-block-space;
   height: 100%;
-  // max-height: 328px;
   overflow: hidden;
   border: 1px solid $info--lighter;
 
