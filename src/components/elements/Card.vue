@@ -104,7 +104,9 @@ export default class Card extends Vue {
   &__img {
     display: block;
     margin: (-$default-block-space) (-$default-block-space) 0;
-    width: calc(100% + 2 * $default-block-space);
+    // get minification error on build
+    // width: calc(100% + 2 * $default-block-space);
+    width: calc(100% + 48px);
   }
 
   &__title {
