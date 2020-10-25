@@ -9,7 +9,7 @@
       </div>
       <BaseButton
         class="card__btn"
-        @click="onBtnClick"
+        @click.native="onBtnClick"
         :icon="item.isInBasket"
         :inBasket="item.isInBasket"
         :isLoading="item.isLoading"
@@ -37,15 +37,7 @@ import { Component, Vue, Prop } from "vue-property-decorator";
 // images
 import Check from "@/assets/icons/check.svg";
 
-interface CardType {
-  img: string;
-  title: string;
-  isSold: boolean;
-  price?: number;
-  priceOld?: number;
-  isInBasket?: boolean;
-  isLoading?: boolean;
-}
+import { CardType } from "@/types";
 
 @Component({})
 export default class Card extends Vue {

@@ -96,8 +96,8 @@ export default class BaseButton extends Vue {
   }
 
   &__loading-icon {
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
 
     animation: rotate 2.1s linear infinite;
 
