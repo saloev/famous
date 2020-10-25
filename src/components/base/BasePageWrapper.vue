@@ -29,3 +29,12 @@ export default class BasePageWrapper extends Vue {
   visuallyHidden?: boolean;
 }
 </script>
+
+<style lang="scss">
+  .base-page-wrapper {
+    &__title {
+      margin: 0;
+      margin-bottom: 40px;
+    }
+  }
+</style>

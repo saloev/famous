@@ -1,6 +1,6 @@
 <template>
   <footer class="main-footer">
-    <BaseContainer>
+    <BaseContainer class="main-footer__container">
       <MainNav logoType="dark">
         <FooterLinks />
       </MainNav>
@@ -22,3 +22,11 @@ import FooterLinks from "./MainFooterLinks.vue";
 })
 export default class MainFooter extends Vue {}
 </script>
+
+<style lang="scss">
+  .main-footer {
+    &__container {
+      background: inherit;
+    }
+  }
+</style>
