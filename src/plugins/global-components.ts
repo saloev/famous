@@ -1,19 +1,18 @@
-import { VueConstructor } from "vue";
+import { VueConstructor, Component } from "vue";
+import BaseButton from "@/components/base/BaseButton.vue";
+import BaseContainer from "@/components/base/BaseContainer.vue";
+import BaseLink from "@/components/base/BaseLink.vue";
+import BasePageWrapper from "@/components/base/BasePageWrapper.vue";
 
-/**
- * Global components
- */
-export default (app: VueConstructor) => {
-  const requireComponent = require.context("../components/base", true, /Base[A-Z]\w+\.(vue|js)$/);
-  requireComponent.keys().forEach((fileName) => {
-    let baseComponentConfig = requireComponent(fileName);
-    baseComponentConfig = baseComponentConfig.default || baseComponentConfig;
-    const baseComponentName = baseComponentConfig.name || fileName.replace(/^.+\//, "").replace(/\.\w+$/, "");
+const components: any = [
+  ["BaseButton", BaseButton],
+  ["BasePageWrapper", BasePageWrapper],
+  ["BaseContainer", BaseContainer],
+  ["BaseLink", BaseLink],
+];
 
-    // IE can't recognize component name
-    const nameFixForIE = baseComponentName === "VueComponent"
-      ? baseComponentConfig.extendOptions.name
-      : baseComponentName;
-    app.component(nameFixForIE, baseComponentConfig);
+export default (vue: VueConstructor) => {
+  components.forEach(([name, component]: any) => {
+    vue.component(name, component);
   });
 };
