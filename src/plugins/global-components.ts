@@ -7,8 +7,6 @@ export default (app: VueConstructor) => {
   const requireComponent = require.context("../components/base", true, /Base[A-Z]\w+\.(vue|js)$/);
   requireComponent.keys().forEach((fileName) => {
     let baseComponentConfig = requireComponent(fileName);
-    // console.log(baseComponentConfig);
-    // alert(baseComponentConfig);
     baseComponentConfig = baseComponentConfig.default || baseComponentConfig;
     const baseComponentName = baseComponentConfig.name || fileName.replace(/^.+\//, "").replace(/\.\w+$/, "");
 
