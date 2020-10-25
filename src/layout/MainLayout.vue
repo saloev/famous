@@ -27,16 +27,20 @@ export default class MainLayout extends Vue {}
 
 <style lang="scss">
 .main-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; // calc with vh not workin in IE
   &__header {
     border-bottom: 1px solid $info;
   }
 
   &__content {
-    min-height: calc(100vh - 97px - 96px);
     padding: 45px 0;
   }
 
   &__footer {
+    margin-top: auto;
+
     background-color: $info--light;
   }
 }

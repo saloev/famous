@@ -33,7 +33,6 @@ export default class Home extends Vue {
 
   @Watch("basket") onBasketChange(val: Array<number>) {
     LS.save(val);
-    console.log(this);
   }
 
   get cardList(): Array<CardType> {

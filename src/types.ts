@@ -16,4 +16,5 @@ export interface StoreState {
 
 export interface BasketPayload {
   clear?: boolean;
-  items: Array<number>; 
+  items: Array<number>;
+}
