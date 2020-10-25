@@ -1,10 +1,13 @@
 <template>
-  <div class="home"></div>
+  <div class="home">
+    <BasePageWrapper title="Картины эпохи Возрождения">
+    </BasePageWrapper>
+  </div>
 </template>
 
-<script>
-export default {
-  name: "Home",
-  components: {},
-};
+<script lang="ts">
+import { Component, Vue } from "vue-property-decorator";
+
+@Component({})
+export default class Home extends Vue {}
 </script>
