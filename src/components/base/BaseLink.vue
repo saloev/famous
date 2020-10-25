@@ -58,6 +58,9 @@ export default class BaseLink extends Vue {
         },
         style: {
           color: this.color
+        },
+        attrs: {
+          href: this.link,
         }
       },
       [this.$slots.default]

@@ -23,8 +23,8 @@
 import { Component, Vue, Prop } from "vue-property-decorator";
 
 // images
-import LogoSrc from "@/assets/images/logo.svg";
-import LogoSrcDark from "@/assets/images/logo--dark.svg";
+import LogoSrc from "@/assets/icons/logo.svg";
+import LogoSrcDark from "@/assets/icons/logo--dark.svg";
 
 // types
 interface MenuType {
