@@ -142,6 +142,8 @@ export default class Card extends Vue {
 
   &__btn-icon {
     display: block;
+
+    animation: none; //for IE
   }
 }
 </style>
