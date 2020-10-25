@@ -1,7 +1,7 @@
 import { VueConstructor } from "vue";
 
 /**
- * Регистрируем глобальгные компоненты
+ * Global components
  */
 export default (app: VueConstructor) => {
   const requireComponent = require.context("../components/base", true, /Base[A-Z]\w+\.(vue|js)$/);
@@ -12,7 +12,7 @@ export default (app: VueConstructor) => {
     baseComponentConfig = baseComponentConfig.default || baseComponentConfig;
     const baseComponentName = baseComponentConfig.name || fileName.replace(/^.+\//, "").replace(/\.\w+$/, "");
 
-    // IE can't recognaze compoennet name
+    // IE can't recognize component name
     const nameFixForIE = baseComponentName === "VueComponent"
       ? baseComponentConfig.extendOptions.name
       : baseComponentName;
